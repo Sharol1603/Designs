@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Student Assignment Tracker — a calm personal planner for assignments stored in this browser."
+    />
+    <title>Student Assignment Tracker</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="#/" aria-label="Student Assignment Tracker home">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">
+            <span class="brand__name">Student Assignment Tracker</span>
+            <span class="brand__tagline">Keep track of what’s due next.</span>
+          </span>
+        </a>
+        <a class="btn btn--primary header-add" href="#/add">+ Add assignment</a>
+      </div>
+      <nav class="primary-nav" aria-label="Primary">
+        <a class="primary-nav__link" data-nav="dashboard" href="#/">Dashboard</a>
+        <a class="primary-nav__link" data-nav="assignments" href="#/assignments">Assignments</a>
+        <a class="primary-nav__link" data-nav="data" href="#/data">Your Data</a>
+      </nav>
+    </header>
+
+    <main id="main" class="site-main" tabindex="-1"></main>
+
+    <div
+      id="toast"
+      class="toast"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      hidden
+    ></div>
+
+    <div
+      id="dialog-root"
+      class="dialog-root"
+      hidden
+    ></div>
+
+    <script src="js/status.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
